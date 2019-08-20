@@ -4,9 +4,28 @@
 // that manipulates variables defined in the outer scope.
 // The outer scope can be a parent function, or the top level of the script.
 
+function family(familyName) {
+  const parent1 = "Dad";
+  const parent2 = "Mom";
+
+  console.log(`My ${parent1} and ${parent2} are in the house`);
+  function child(childName) {
+    const child1 = "Mat";
+    console.log(`${child1} is a good boy`);
+
+    function grandChild(grandChildName) {
+      const grandChild1 = "Tina";
+
+      console.log(`${grandChild1} is a good girl`);
+    }
+    grandChild();
+  }
+  child();
+}
+
+family();
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
-
 
 // ==== Challenge 2: Implement a "counter maker" function ====
 const counterMaker = () => {
