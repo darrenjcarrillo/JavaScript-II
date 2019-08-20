@@ -504,22 +504,24 @@ console.log(ticketPriceTotal);
 // Problem 1
 // alot of the runners are running late. We need to contact them hopefully they check their email lol.
 
-let contactRunner = [1];
+let contactRunner = [];
 
 runners.forEach(runner => {
-  return contactRunner.push(
-    `We can contact all the runners here: ${runner.email}`
-  );
+  return contactRunner.push(`${runner.email}`);
 });
 
 console.log(contactRunner);
 
 // Problem 2
-// The orginizer has gone mad and wants the list of runners that has a letter M on their first name banned. Get a list of all runners that has letter M on their first name.
-
+// A lady is looking came for her husband because she suspect him of cheating. The her husband Hank.
 let husband = runners.filter(runner => {
   return runner.first_name === "Hank";
 });
 
 console.log(husband);
 // Problem 3
+// return all the runners company names with lowercase.
+let companyName = runners.map(runner => {
+  return runner.company_name.toLocaleLowerCase();
+});
+console.log(companyName);
